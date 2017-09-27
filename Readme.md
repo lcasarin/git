@@ -1,8 +1,2 @@
-Git COurse
-Linha 3
-Teste do git
-asaskaslnas
-asjasnasjkans
-asnjasnakjsnas
-
+sudo apt-get install pepperflashplugin-nonfree
 Testando git
