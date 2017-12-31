@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Usuario {
 
@@ -38,7 +38,7 @@ class Usuario {
 	public function setDtcadastro($value){
 		$this->dtcadastro = $value;
 	}
-	
+
 	public function loadById($id){
 
 		$sql = new Sql();
@@ -166,8 +166,8 @@ class Usuario {
 
 	}
 
-} 	
-	
+}
+
 
 
  ?>
