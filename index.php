@@ -21,7 +21,23 @@
  // echo json_encode($search);
 
  //Carrega um usuario usando o login e a senha
- $usuario = new Usuario();
- $usuario->login("lmarquezini", "x");
- echo $usuario;
+ // $usuario = new Usuario();
+ // $usuario->login("lmarquezini", "x");
+ // echo $usuario;
+
+// $aluno = new Usuario();
+// $aluno->setDeslogin("lucas");
+// $aluno->setDessenha("likd");
+// $aluno->insert();
+// echo $aluno;
+
+// metódo construtor criando um novo usuario
+// $aluno = new Usuario("aluno", "onula");
+// $aluno->insert();
+// echo $aluno;
+
+$usuario = new Usuario();
+$usuario->loadById(9);
+$usuario->update("phpmyadmin", "nimdaymphp");
+echo $usuario;
  ?>
