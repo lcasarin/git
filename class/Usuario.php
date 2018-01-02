@@ -56,7 +56,7 @@ class Usuario {
 	}
 
 	public static function getList(){
-
+// Quando nao usa this o metodo fica mais forte e melhor para chamar
 		$sql = new Sql();
 
 		return $sql->select("SELECT * FROM tb_usuarios ORDER BY deslogin;");
@@ -66,7 +66,7 @@ class Usuario {
 	public static function search($login){
 
 		$sql = new Sql();
-
+//:SEARCH é o id na query
 		return $sql->select("SELECT * FROM tb_usuarios WHERE deslogin LIKE :SEARCH ORDER BY deslogin", array(
 			':SEARCH'=>"%".$login."%"
 		));
@@ -83,16 +83,20 @@ class Usuario {
 		));
 
 		if (count($results) > 0) {
-
-			$this->setData($results[0]);
-
-		} else {
+		$data = $results[0];
+		$this->setIdusuario($data['idusuario']);
+		$this->setDeslogin($data['deslogin']);
+		$this->setDessenha($data['dessenha']);
+		// $this->setDtcadastro(new DateTime($data['dtcadastro']));
+		 }
+		 else {
 
 			throw new Exception("Login e/ou senha inválidos.");
 
 		}
 
 	}
+
 
 	public function setData($data){
 
@@ -161,7 +165,7 @@ class Usuario {
 			"idusuario"=>$this->getIdusuario(),
 			"deslogin"=>$this->getDeslogin(),
 			"dessenha"=>$this->getDessenha(),
-			"dtcadastro"=>$this->getDtcadastro()->format("d/m/Y H:i:s")
+			//"dtcadastro"=>$this->getDtcadastro()->format("d/m/Y H:i:s")
 		));
 
 	}
