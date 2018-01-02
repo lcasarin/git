@@ -1,0 +1,49 @@
+
+ <?php
+
+ require_once("config.php");
+// Carrega um Usuário
+//$root = new Usuario();
+//$root->loadbyId(1);
+//echo $root;
+
+//Carrega uma lista de usuarios
+// Quando um metodo e static é so chamar com o nome da classe e o nome da funcao
+// $lista = Usuario::getList();
+// echo json_encode($lista);
+
+ // $sql = new Sql();
+ // $usuarios = $sql->select("SELECT * FROM tb_usuarios");
+ // echo json_encode($usuarios);
+
+ //Carrega uma lista de usuarios buscando pelo login
+ // $search = Usuario::search("l");
+ // echo json_encode($search);
+
+ //Carrega um usuario usando o login e a senha
+ // $usuario = new Usuario();
+ // $usuario->login("lmarquezini", "x");
+ // echo $usuario;
+
+// $aluno = new Usuario();
+// $aluno->setDeslogin("lucas");
+// $aluno->setDessenha("likd");
+// $aluno->insert();
+// echo $aluno;
+
+// metódo construtor criando um novo usuario
+// $aluno = new Usuario("aluno", "onula");
+// $aluno->insert();
+// echo $aluno;
+
+//alterar o usuario  deslogin e a dessenha
+// $usuario = new Usuario();
+// $usuario->loadById(9);
+// $usuario->update("phpmyadmin", "nimdaymphp");
+// echo $usuario;
+
+$user = new Usuario();
+$user->loadById(6);
+$user->delete();
+echo $user;
+ ?>
