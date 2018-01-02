@@ -36,8 +36,14 @@
 // $aluno->insert();
 // echo $aluno;
 
-$usuario = new Usuario();
-$usuario->loadById(9);
-$usuario->update("phpmyadmin", "nimdaymphp");
-echo $usuario;
+//alterar o usuario  deslogin e a dessenha
+// $usuario = new Usuario();
+// $usuario->loadById(9);
+// $usuario->update("phpmyadmin", "nimdaymphp");
+// echo $usuario;
+
+$user = new Usuario();
+$user->loadById(6);
+$user->delete();
+echo $user;
  ?>
